@@ -1,0 +1,54 @@
+===================================
+Plan de réalisation du portfolio :
+===================================
+1- Chercher plusieurs templates pour s'insipirer 
+2- Faire des petits croquis de ce que je souhaite idéalement à terme
+3- Faire l'inventaire de tous les projets que je vais présenter
+4- Commencer le portfolio
+
+=================================
+Organisation du portfolio :
+=================================
+PAGE 1 : Acceuil
+
+PAGE 2 : A propos de moi
+
+PAGE 3 : Projets
+    - Faire 2 séctions : "Projets Data Science" et "Autres projets"
+    - Dans chaque projet (data science ou autre) :
+	* Description du projet
+	* Méthode de réalisation
+	* Techniques utilisées
+	* Images d'illustration
+	* Lien vers le projet
+idée : Faire comme un article pour chaque projet.
+
+PAGE 4 : Me contacter
+
+==================================
+PAGE 1
+==================================
+Bienvenue sur mon site web pour en apprendre plus sur moi !
+
+==================================
+PAGE 2
+==================================
+
+
+==================================
+PAGE 3
+==================================
+- Section Data science 
+  * Data mining : Prédiction 
+  * Data visualisation : Espérance de vie dans le monde
+  * ML1 : TP1 & TP2
+  * Deep learning : coloration d'image
+
+- Section autres projets
+  * OPALE
+  * Mariage
+  * OxxoData
+
+================================
+Explication des projets 
+================================
