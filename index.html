@@ -1,725 +1,822 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <!--meta tags-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-
-    <!--Template name-->
-    <title>Wissem - Portfolio</title>
-    <link rel="shortcut icon" type="images" href="images/logo.png">
-    <!--Font Awesome css-->
+    <title>DataForest - Révélez la magie de vos données</title>
+    <meta name="description" content="Transformez vos données en insights lumineux. Une approche enchantée et moderne de l'analyse de données pour TPE/PME.">
+    
+    <link rel="shortcut icon" type="image/png" href="images/deer-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS Libraries -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <!--Bootstrap css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!--Animated headline css-->
-    <link rel="stylesheet" href="css/jquery.animatedheadline.css">
-
-    <!--Owl carousel css-->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.default.css">
-
-    <!--Magnific popup css-->
     <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <!--line icon css-->
-    <link rel="stylesheet" href="css/line-icons.min.css">
-
-    <!--Theme css-->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--Responsive css-->
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/enchanted-forest.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-<!--Preloader starts-->
-
-<div class="loader_bg"><div class="loader"></div></div>
-
-<!--Preloader ends-->
-
-<!--Navigation area starts-->
-
-<header class="nav-area navbar-fixed-top">
-    <div class="container">
-        <div class="row">
-            <!--main menu starts-->
-
-            <div class="col-md-12">
-                <div class="main-menu">
-                    <div class="navbar navbar-cus">
-                        <div class="navbar-header">
-                            <a href="index.html" class="navbar-brand"><img src="images/logo.png" alt="" style="height: 40px; "></a> <!--change logo name-->
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-
-                        <div class="navbar-collapse collapse">
-                            <nav>
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li class="active"><a class="smooth-menu" href="#home">Home</a></li>
-                                    <li><a class="smooth-menu" href="#about">About</a></li>
-                                    <li><a class="smooth-menu" href="#services">Services</a></li>
-                                    <li><a class="smooth-menu" href="#portfolio">Portfolio</a></li>
-                                    <li><a class="smooth-menu" href="#resume">Experiences</a></li>
-                                    <li><a class="smooth-menu" href="#contact">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--main menu ends-->
+<!-- Preloader with magical loading -->
+<div id="enchanted-loader" class="loader-container">
+    <div class="forest-loader">
+        <div class="magical-deer">
+            <div class="deer-silhouette"></div>
+            <div class="deer-antlers"></div>
+            <div class="deer-glow"></div>
         </div>
-    </div>
-</header>
-
-<!--Navigation area ends-->
-
-<!--Banner area starts-->
-
-<div class="banner-area" id="home">
-    <div id="particles-js"></div>
-    <div class="banner-table">
-        <div class="banner-table-cell">
-            <div class="welcome-text">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-xs-12">
-                            <section class="intro animate-scale">
-                                
-                                <div class="img-area" >
-                                    <img src="images/wissem.jpeg" alt=""> <!--edit image-->
-                                </div>
-
-                                <h4 style="font-size: 28px; color: aliceblue;">Welcome to my life as a Junior Data Scientist!</h4>
-
-                                <h1 class="ah-headline">
-
-                                    <span class="ah-words-wrapper">
-                                        <b class="is-visible">Wissem CHERBAL</b><!--edit the designation if you are in different profession-->
-                                        <b>Data scientist in the making</b> <!--edit the designation if you are in different profession-->
-                                    </span>
-                                </h1>
-
-                                <div class="social-icon">
-                                    <ul>
-                                        <li><a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="https://www.pinterest.com/" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-                                    </ul>
-                                </div>
-
-
-                            </section>
-
-                            <div class="clearfix"></div>
-
-                            <a class="mouse-scroll hidden-xs dadada" href="#about">
-                                <span class="mouse">
-                                    <span class="mouse-movement"></span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="loading-text">
+            <span class="loading-word">Réveil</span>
+            <span class="loading-word">de la</span>
+            <span class="loading-word">forêt...</span>
+        </div>
+        <div class="fireflies-loader">
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
         </div>
     </div>
 </div>
 
-<!--Banner area ends-->
+<!-- Magical Navigation -->
+<nav id="enchanted-nav" class="magical-navigation">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <div class="logo-deer">🦌</div>
+            <span class="logo-text">DataForest</span>
+        </div>
+        
+        <div class="nav-menu">
+            <a href="#home" class="nav-item active" data-section="home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Refuge</span>
+            </a>
+            <a href="#about" class="nav-item" data-section="about">
+                <span class="nav-icon">🌿</span>
+                <span class="nav-text">L'Essence</span>
+            </a>
+            <a href="#services" class="nav-item" data-section="services">
+                <span class="nav-icon">✨</span>
+                <span class="nav-text">Magie</span>
+            </a>
+            <a href="#portfolio" class="nav-item" data-section="portfolio">
+                <span class="nav-icon">🗺️</span>
+                <span class="nav-text">Carte Enchantée</span>
+            </a>
+            <a href="#contact" class="nav-item" data-section="contact">
+                <span class="nav-icon">🧭</span>
+                <span class="nav-text">Contact</span>
+            </a>
+        </div>
+        
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
 
-<!--About area starts-->
-
-<div class="about-area section-padding" id="about" >
-    <div class="container" >
-        <div class="row" >
-            <div class="col-md-4 col-sm-12">
-                <div class="stack">
-                    <img src="images/wissem.jpeg" alt="about image"> <!--edit image-->
+<!-- Hero Section - Forêt Enchantée -->
+<section id="home" class="enchanted-hero">
+    <div class="forest-background">
+        <div class="forest-layer layer-1"></div>
+        <div class="forest-layer layer-2"></div>
+        <div class="forest-layer layer-3"></div>
+        <div class="forest-layer layer-4"></div>
+    </div>
+    
+    <!-- Cerf Blanc Gardien -->
+    <div class="white-deer-container">
+        <div class="white-deer">
+            <div class="deer-body">
+                <div class="deer-head"></div>
+                <div class="deer-antlers">
+                    <div class="antler left"></div>
+                    <div class="antler right"></div>
+                </div>
+                <div class="deer-legs">
+                    <div class="leg front-left"></div>
+                    <div class="leg front-right"></div>
+                    <div class="leg back-left"></div>
+                    <div class="leg back-right"></div>
                 </div>
             </div>
-            <div class="col-md-7 col-md-offset-1 col-sm-12">
-                <div class="about-right">
-                    <h2>Data Scientist Junior</h2>
-                    <p>Hello ! I'm <span>Wissem CHERBAL</span>, a simple, creative and enthusiastic person who likes to have fun. Data Science is an exciting field that allows me to have fun while working :) I'm currently doing my end-of-study internship at <span>Volvo Group</span>. As a Junior Data Scientist, I feel like a detective looking for clues in mountains of data. My aim is to find actionable data to answer complex real-world questions. In short, I'm a data enthusiast who finds pleasure in solving puzzles through data analysis!</p>
-                    <img src="images/signature.png" style="width: 200px;">
+            <div class="deer-aura"></div>
+            <div class="deer-breath"></div>
+        </div>
+    </div>
+    
+    <!-- Lucioles animées -->
+    <div class="fireflies-container">
+        <div class="firefly" data-insight="ROI +45%"></div>
+        <div class="firefly" data-insight="Conversion +32%"></div>
+        <div class="firefly" data-insight="Efficacité +67%"></div>
+        <div class="firefly" data-insight="Croissance +28%"></div>
+        <div class="firefly" data-insight="Satisfaction 98%"></div>
+        <div class="firefly" data-insight="Automatisation 85%"></div>
+    </div>
+    
+    <!-- Arbres scintillants -->
+    <div class="sparkling-trees">
+        <div class="tree tree-1">
+            <div class="tree-trunk data-flow"></div>
+            <div class="tree-crown">
+                <div class="data-particle"></div>
+                <div class="data-particle"></div>
+                <div class="data-particle"></div>
+            </div>
+        </div>
+        <div class="tree tree-2">
+            <div class="tree-trunk data-flow"></div>
+            <div class="tree-crown">
+                <div class="data-particle"></div>
+                <div class="data-particle"></div>
+                <div class="data-particle"></div>
+            </div>
+        </div>
+        <div class="tree tree-3">
+            <div class="tree-trunk data-flow"></div>
+            <div class="tree-crown">
+                <div class="data-particle"></div>
+                <div class="data-particle"></div>
+                <div class="data-particle"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contenu Hero -->
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="enchanted-title">
+                <span class="title-line">Bienvenue dans un monde</span>
+                <span class="title-line">où la <span class="highlight-word">data</span> est</span>
+                <span class="title-line magical-words">
+                    <span class="word">vivante</span>
+                    <span class="word">organique</span>
+                    <span class="word">lumineuse</span>
+                </span>
+            </h1>
+            
+            <p class="hero-description">
+                Ici, nous vous aidons à apprivoiser votre forêt de données, 
+                à lire entre les feuilles, à révéler les trésors cachés. 
+                Ensemble, nous éclairons votre chemin de croissance. 
+                <em>Naturellement.</em>
+            </p>
+            
+            <div class="hero-actions">
+                <button class="btn-enchanted primary" onclick="scrollToSection('about')">
+                    <span class="btn-text">Découvrir la magie</span>
+                    <span class="btn-sparkle">✨</span>
+                </button>
+                <button class="btn-enchanted secondary" onclick="scrollToSection('portfolio')">
+                    <span class="btn-text">Explorer la carte</span>
+                    <span class="btn-icon">🗺️</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-text">Descendez dans la forêt</div>
+        <div class="scroll-arrow">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+        </div>
+    </div>
+</section>
 
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <ul class="about-list">
-                                <li> <span class="title">Email</span> <span class="value">wissem.cherbal@hotmail.com</span> </li>
-                                <li> <span class="title">Phone</span> <span class="value">07.67.73.12.29</span> </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="about-list">
-                                <li> <span class="title">Address</span> <span class="value">Lyon, France</span> </li>
-                                <li> <span class="title">Hobbies</span> <span class="value">Sport, Photogaphy, Cake design</span> </li>
-                            </ul>
+<!-- Section À Propos - L'Essence -->
+<section id="about" class="enchanted-about">
+    <div class="section-background">
+        <div class="mystical-fog"></div>
+        <div class="floating-leaves">
+            <div class="leaf leaf-1"></div>
+            <div class="leaf leaf-2"></div>
+            <div class="leaf leaf-3"></div>
+            <div class="leaf leaf-4"></div>
+            <div class="leaf leaf-5"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">L'Essence de Notre Magie</h2>
+            <p class="section-subtitle">
+                Découvrez comment nous transformons vos données en sagesse vivante
+            </p>
+        </div>
+        
+        <div class="about-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-visual">
+                        <div class="sanctuary-house">
+                            <div class="house-structure">
+                                <div class="house-roof"></div>
+                                <div class="house-walls"></div>
+                                <div class="house-windows">
+                                    <div class="window window-1"></div>
+                                    <div class="window window-2"></div>
+                                </div>
+                                <div class="house-door"></div>
+                            </div>
+                            <div class="house-glow"></div>
+                            <div class="house-warmth"></div>
                         </div>
                         
-                    </div>
-
-                    
-                    <a href="#skills-bd" class="skill-btn btn-a">Compétences</a>
-                    <a href="images/CV_Wissem_CHERBAL.png" class="down-btn btn-a" download>télécharger cv</a>
-                    
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--About area ends-->
-
-<!--Services area starts-->
-
-<div class="services-area section-padding" id="services">
-    <div class="container">
-        <div class="row">
-            <div class="section-title">
-                <h2>My <span>Services</span></h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 service">
-                <div class="service-box">
-                    <span class="after"></span>
-                    <span class="before"></span>
-                    <div class="service-icon">
-                        <i class="icon-compass"></i>
-                    </div>
-
-                    <div class="service-content">
-                        <h4>Data analysis</h4>
-                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, id laboriosam maxime nam neque nulla placeat quam repudiandae similique ullam?</p>-->
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-4 col-sm-6 service">
-                <div class="service-box">
-                    <span class="after"></span>
-                    <span class="before"></span>
-                    <div class="service-icon">
-                        <i class="icon-aperture"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Web Design</h4>
-                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, id laboriosam maxime nam neque nulla placeat quam repudiandae similique ullam?</p>-->
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-4 col-sm-6 service">
-                <div class="service-box">
-                    <span class="after"></span>
-                    <span class="before"></span>
-                    <div class="service-icon">
-                        <i class="icon-gears"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Cake Design</h4>
-                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, id laboriosam maxime nam neque nulla placeat quam repudiandae similique ullam?</p>-->
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<!--Services area ends-->
-
-<!--Skills area starts-->
-
-<div id="skills-bd" class="skills-area section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="section-title">
-                <h2>My <span>Skills</span></h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="about-text-right">
-
-                    <div id="skills">
-
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="col-md-12">
-
-                                    <!-- skillbar -->
-                                    <div class="skillbar" data-percent="95%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">HTML5</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">95%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar -->
-
-                                </div>
-
-
-                                <div class="col-md-12">
-
-                                    <!-- skillbar -->
-                                    <div class="skillbar" data-percent="90%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">CSS3</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">90%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar -->
-
-                                </div>
-
-
-                                <div class="col-md-12">
-
-                                    <!-- skillbar -->
-                                    <div class="skillbar" data-percent="90%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">JQuery</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">90%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar -->
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="col-md-12">
-
-                                    <!-- skillbar -->
-                                    <div class="skillbar" data-percent="85%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">Javascript</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">85%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar -->
-
-                                </div>
-
-
-                                <div class="col-md-12">
-
-                                    <!-- skillbar -->
-                                    <div class="skillbar" data-percent="75%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">WordPress</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">75%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar -->
-
-                                </div>
-
-
-                                <div class="col-md-12">
-
-                                    <!-- skillbar -->
-                                    <div class="skillbar" data-percent="75%"> <!--edit percentage-->
-
-                                        <h6 class="skillbar-title">Photoshop</h6> <!--edit skills-->
-                                        <h6 class="skillbar-percent">75%</h6> <!--edit percentage-->
-
-                                        <div class="skillbar-bar">
-                                            <div class="skillbar-child"></div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end skillbar -->
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Skills area ends-->
-
-<!--Portfolio area starts-->
-
-<div id="portfolio" class="portfolio-area section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="section-title">
-                <h2>My <span>Portfolio</span></h2>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-content">
-        <div class="port-nav">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <ul class="port-nav-list">
-                            <li><a class="img-filter active" data-filter="*">Tout</a></li>
-                            <li><a class="img-filter" data-filter=".design">Data Science</a></li>
-                            <li><a class="img-filter" data-filter=".web">Web Design</a></li>
-                            <li><a class="img-filter" data-filter=".video">Photography</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row port-items" id="img-filter" style="position: relative; height: 570px;">
-                <div class="col-md-4 col-sm-6 col-xs-12 single-port design photography" style="position: absolute; left: 0px; top: 0px;">
-                    <div class="project-item">
-                        <a href="images/port/life_expect.png" class="zoom1">
-                            <!--edit image-->
-                            <img src="images/port/life_expect.png" alt="portfolio image"> <!--edit image-->
-                            <div class="overlay">
-                                <div class="overlay-inner">
-                                    <h4><i>LifeTime</i></h4>
-                                    <p>Data  Visualisation</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 single-port design" style="position: absolute; left: 380px; top: 0px;">
-                    <div class="project-item">
-                        <a href="images/port/image_colorization.png" class="zoom1">
-                            <!--edit image-->
-                            <img src="images/port/image_colorization.png" alt="portfolio image"> <!--edit image-->
-                            <div class="overlay">
-                                <div class="overlay-inner">
-                                    <h4><i>Image colorization</i></h4>
-                                    <p>Deep Learning</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 single-port photography" style="position: absolute; left: 760px; top: 0px;">
-                    <div class="project-item">
-                        <a href="images/port/3.jpg" class="zoom1">
-                            <img src="images/port/constellastar.png" alt="portfolio image"> <!--edit image-->
-                            <div class="overlay">
-                                <div class="overlay-inner">
-                                    <h4>Constellastar</h4>
-                                    <p>Web Design</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 single-port web" style="position: absolute; left: 0px; top: 285px;">
-                    <div class="project-item">
-                        <a href="images/port/4.jpg" class="zoom1">
-                            <img src="images/port/supermarket.png" alt="portfolio image"> <!--edit image-->
-                            <div class="overlay">
-                                <div class="overlay-inner">
-                                    <h4>Segmentation du marché</h4>
-                                    <p>Data Mining</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 single-port web packaging" style="position: absolute; left: 380px; top: 285px;">
-                    <div class="project-item">
-                        <a href="images/port/5.jpg" class="zoom1">
-                            <img src="images/port/5.jpg" alt="portfolio image"> <!--edit image-->
-                            <div class="overlay">
-                                <div class="overlay-inner">
-                                    <h4>Project Five</h4>
-                                    <p>Brand, Design</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 single-port branding video packaging" style="position: absolute; left: 760px; top: 285px;">
-                    <div class="project-item">
-                        <a href="images/port/6.jpg" class="zoom1">
-                            <img src="images/port/6.jpg" alt="portfolio image"> <!--edit image-->
-                            <div class="overlay">
-                                <div class="overlay-inner">
-                                    <h4>Project Six</h4>
-                                    <p>Brand, Design</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Portfolio area ends-->
-
-<!--Statistic area starts-->
-
-<div class="statistic-area section-padding custom-border">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <h2 class="counter">7000</h2> <!--edit-->
-                    <p>Hours Worked</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <h2 class="counter">8247</h2> <!--edit-->
-                    <p>Cups of Coffee</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <h2 class="counter">6500</h2> <!--edit-->
-                    <p>Happy Clients</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="item">
-                    <h2 class="counter">7555</h2> <!--edit-->
-                    <p>Projects Finished</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Statistic area ends -->
-
-<!--Experience area starts-->
-
-<div id="resume" class="experience-area section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="section-title">
-                <h2>My <span>Experience</span></h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <ul class="resumes">
-                    <li class="resume-item expr">
-                        <h3>Internship : Data Analyst</h3>
-                        <h4>Volvo GROUP</h4>
-                        <h5>Feb 2023 - present</h5>
-                        <ul>
-                           - Use Power BI to generate reports and implement Machine Learning techniques for data analysis.</br>
-                           - Setting up automated processes using Power Automate.</br>
-                           - In-depth understanding of logistics and supply chain issues.</br>
-                           - Creation of video montages to present projects and promote the service.
-                        </ul>
-                        </p>
-                    </li>
-                    <li class="resume-item expr">
-                        <h3>Internship: Communication functionality between students</h3>
-                        <h4>Laboratoire de recherche LIRIS</h4>
-                        <h5>2021 - 2022</h5>
-                        <ul>
-                           - Identification of needs, analysis and construction of the user experience.</br>
-                           - Front-end and backend development of the feature
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="col-md-6">
-                <ul class="resumes">
-                    <li class="resume-item expr">
-                        <h3>Internship: System and network administration</h3>
-                        <h4>OXXODATA SAS </h4>
-                        <h5>2019 - 2020</h5>
-                        <ul>
-                           - Network and system technical flow management.</br>
-                           - Implementation of B To C / B To B product platform and Cloud & Telecom project pre-sales.
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Experience area ends-->
-
-<!--Contact Area Starts-->
-
-<div id="contact" class="contact-area section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="section-title">
-                <h2>My <span>Contact</span></h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-contact-form">
-
-                <form id="contact-form" method="post" action="contact.php" novalidate="true">
-
-                    <div class="messages"></div> <!--you can change the message in contact.php file -->
-
-                    <div class="controls">
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Enter your full name *" required="required" data-error="Fullname is required.">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Enter your email *" required="required" data-error="Valid email is required.">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <textarea id="form_message" name="message" class="form-control" placeholder="Your Message *" rows="4" required="required" data-error="Leave a message for me"></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <button class="btn btn-send" value="">Send message</button>
-                            </div>
+                        <div class="wisdom-particles">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
                         </div>
                     </div>
-
-                </form>
-
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-1">
-                <div class="right-contact">
-                    <div class="right-contact-text">
-                        <i class="fa fa-map-marker"></i>
-                        <h2>France</h2>
-                        <p>Lyon</p> <!--edit here-->
-                    </div>
-                    <div class="right-contact-text">
-                        <i class="fa fa-phone"></i>
-                        <h2>Contact Number</h2>
-                        <p>+33767731229</p> 
-                    </div>
-                    <div class="right-contact-text">
-                        <i class="fa fa-linkedin"></i>
-                        <h2>Linkedin Address</h2>
-                        <a href="https://www.linkedin.com/in/wissem-amel-cherbal-37a5041b8">Wissem Cherbal </a>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <div class="text-block">
+                            <h3>🏡 Le Refuge du Savoir</h3>
+                            <p>
+                                Dans notre maison-refuge, chaque donnée trouve sa place. 
+                                Nous créons un environnement sécurisant où vos informations 
+                                se transforment en insights précieux, comme des graines 
+                                qui deviennent arbres de sagesse.
+                            </p>
+                        </div>
+                        
+                        <div class="text-block">
+                            <h3>🌳 L'Écosystème Vivant</h3>
+                            <p>
+                                Vos données ne sont pas des chiffres froids. Elles respirent, 
+                                s'interconnectent, évoluent. Notre approche organique révèle 
+                                les patterns cachés, les tendances émergentes, les opportunités 
+                                qui sommeillent dans votre forêt d'informations.
+                            </p>
+                        </div>
+                        
+                        <div class="text-block">
+                            <h3>✨ La Transformation Enchantée</h3>
+                            <p>
+                                Grâce à nos outils modernes et notre vision poétique, 
+                                nous rendons complexe simple, abstrait tangible, 
+                                invisible lumineux. Chaque analyse devient une histoire, 
+                                chaque rapport une révélation.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-</div>
+</section>
 
-<!--Contact Area Ends-->
-
-<!--Footer Area Starts-->
-
-<div class="footer-area">
+<!-- Section Services - La Magie -->
+<section id="services" class="enchanted-services">
+    <div class="section-background">
+        <div class="aurora-lights"></div>
+        <div class="service-constellation">
+            <div class="constellation-star"></div>
+            <div class="constellation-star"></div>
+            <div class="constellation-star"></div>
+            <div class="constellation-star"></div>
+            <div class="constellation-star"></div>
+        </div>
+    </div>
+    
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                <p>&copy; All Right Reserved</p> 
+        <div class="section-header">
+            <h2 class="section-title">Nos Enchantements de Données</h2>
+            <p class="section-subtitle">
+                Chaque service est un sortilège qui révèle la magie cachée de vos informations
+            </p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card" data-service="analysis">
+                <div class="card-glow"></div>
+                <div class="service-icon">
+                    <div class="icon-crystal">💎</div>
+                    <div class="icon-sparkles">
+                        <span class="sparkle"></span>
+                        <span class="sparkle"></span>
+                        <span class="sparkle"></span>
+                    </div>
+                </div>
+                <h3 class="service-title">Cristallisation des Insights</h3>
+                <p class="service-description">
+                    Nous transformons vos données brutes en cristaux de sagesse. 
+                    Analyse approfondie, patterns révélés, tendances illuminées.
+                </p>
+                <div class="service-features">
+                    <span class="feature">Analyse prédictive</span>
+                    <span class="feature">Détection d'anomalies</span>
+                    <span class="feature">Modélisation statistique</span>
+                </div>
+                <button class="service-btn">
+                    <span>Découvrir</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+            
+            <div class="service-card" data-service="visualization">
+                <div class="card-glow"></div>
+                <div class="service-icon">
+                    <div class="icon-crystal">🌟</div>
+                    <div class="icon-sparkles">
+                        <span class="sparkle"></span>
+                        <span class="sparkle"></span>
+                        <span class="sparkle"></span>
+                    </div>
+                </div>
+                <h3 class="service-title">Illumination Visuelle</h3>
+                <p class="service-description">
+                    Vos données prennent vie à travers des visualisations enchantées. 
+                    Dashboards interactifs, graphiques vivants, histoires de données.
+                </p>
+                <div class="service-features">
+                    <span class="feature">Dashboards interactifs</span>
+                    <span class="feature">Storytelling de données</span>
+                    <span class="feature">Visualisations sur-mesure</span>
+                </div>
+                <button class="service-btn">
+                    <span>Découvrir</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+            
+            <div class="service-card" data-service="automation">
+                <div class="card-glow"></div>
+                <div class="service-icon">
+                    <div class="icon-crystal">⚡</div>
+                    <div class="icon-sparkles">
+                        <span class="sparkle"></span>
+                        <span class="sparkle"></span>
+                        <span class="sparkle"></span>
+                    </div>
+                </div>
+                <h3 class="service-title">Automatisation Organique</h3>
+                <p class="service-description">
+                    Vos processus s'automatisent naturellement, comme une forêt 
+                    qui s'autorégule. Workflows intelligents, alertes prédictives.
+                </p>
+                <div class="service-features">
+                    <span class="feature">Pipelines de données</span>
+                    <span class="feature">Alertes intelligentes</span>
+                    <span class="feature">Rapports automatisés</span>
+                </div>
+                <button class="service-btn">
+                    <span>Découvrir</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+            
+            <div class="service-card" data-service="consulting">
+                <div class="card-glow"></div>
+                <div class="service-icon">
+                    <div class="icon-crystal">🧭</div>
+                    <div class="icon-sparkles">
+                        <span class="sparkle"></span>
+                        <span class="sparkle"></span>
+                        <span class="sparkle"></span>
+                    </div>
+                </div>
+                <h3 class="service-title">Guidance Stratégique</h3>
+                <p class="service-description">
+                    Comme un guide expérimenté, nous vous accompagnons dans 
+                    votre transformation data. Stratégie, formation, accompagnement.
+                </p>
+                <div class="service-features">
+                    <span class="feature">Audit data</span>
+                    <span class="feature">Stratégie digitale</span>
+                    <span class="feature">Formation équipes</span>
+                </div>
+                <button class="service-btn">
+                    <span>Découvrir</span>
+                    <span class="btn-arrow">→</span>
+                </button>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!--Footer Area Ends-->
+<!-- Section Portfolio - Carte Enchantée -->
+<section id="portfolio" class="enchanted-portfolio">
+    <div class="section-background">
+        <div class="forest-map-bg"></div>
+        <div class="map-grid"></div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="section-header text-center">
+            <h2 class="section-title">La Carte Enchantée</h2>
+            <p class="section-subtitle">
+                Explorez notre forêt de réalisations. Chaque projet est un arbre de notre écosystème.
+            </p>
+        </div>
+        
+        <div class="portfolio-map">
+            <div class="map-container">
+                <!-- Projet 1 - E-commerce Analytics -->
+                <div class="project-tree" data-project="ecommerce" style="left: 15%; top: 20%;">
+                    <div class="tree-structure">
+                        <div class="tree-trunk">
+                            <div class="data-flow"></div>
+                        </div>
+                        <div class="tree-crown ecommerce">
+                            <div class="leaves">
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                            </div>
+                        </div>
+                        <div class="tree-roots">
+                            <div class="root root-1"></div>
+                            <div class="root root-2"></div>
+                            <div class="root root-3"></div>
+                        </div>
+                        <div class="tree-fruits">
+                            <div class="fruit" data-result="+45% ROI"></div>
+                            <div class="fruit" data-result="+32% Conversion"></div>
+                            <div class="fruit" data-result="-28% Abandon"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Boutique Enchantée</h4>
+                        <p>Analytics e-commerce</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 2 - Manufacturing KPIs -->
+                <div class="project-tree" data-project="manufacturing" style="left: 35%; top: 35%;">
+                    <div class="tree-structure">
+                        <div class="tree-trunk">
+                            <div class="data-flow"></div>
+                        </div>
+                        <div class="tree-crown manufacturing">
+                            <div class="leaves">
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                            </div>
+                        </div>
+                        <div class="tree-roots">
+                            <div class="root root-1"></div>
+                            <div class="root root-2"></div>
+                            <div class="root root-3"></div>
+                        </div>
+                        <div class="tree-fruits">
+                            <div class="fruit" data-result="+67% Efficacité"></div>
+                            <div class="fruit" data-result="-45% Défauts"></div>
+                            <div class="fruit" data-result="+23% Production"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Forge Moderne</h4>
+                        <p>Optimisation industrielle</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 - Marketing Automation -->
+                <div class="project-tree" data-project="marketing" style="left: 60%; top: 25%;">
+                    <div class="tree-structure">
+                        <div class="tree-trunk">
+                            <div class="data-flow"></div>
+                        </div>
+                        <div class="tree-crown marketing">
+                            <div class="leaves">
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                            </div>
+                        </div>
+                        <div class="tree-roots">
+                            <div class="root root-1"></div>
+                            <div class="root root-2"></div>
+                            <div class="root root-3"></div>
+                        </div>
+                        <div class="tree-fruits">
+                            <div class="fruit" data-result="+89% Leads"></div>
+                            <div class="fruit" data-result="+156% Engagement"></div>
+                            <div class="fruit" data-result="+34% Retention"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Jardin Digital</h4>
+                        <p>Automatisation marketing</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 4 - Financial Dashboard -->
+                <div class="project-tree" data-project="finance" style="left: 25%; top: 55%;">
+                    <div class="tree-structure">
+                        <div class="tree-trunk">
+                            <div class="data-flow"></div>
+                        </div>
+                        <div class="tree-crown finance">
+                            <div class="leaves">
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                            </div>
+                        </div>
+                        <div class="tree-roots">
+                            <div class="root root-1"></div>
+                            <div class="root root-2"></div>
+                            <div class="root root-3"></div>
+                        </div>
+                        <div class="tree-fruits">
+                            <div class="fruit" data-result="+78% Visibilité"></div>
+                            <div class="fruit" data-result="-65% Temps rapport"></div>
+                            <div class="fruit" data-result="+45% Précision"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Trésor Transparent</h4>
+                        <p>Dashboard financier</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 5 - HR Analytics -->
+                <div class="project-tree" data-project="hr" style="left: 75%; top: 50%;">
+                    <div class="tree-structure">
+                        <div class="tree-trunk">
+                            <div class="data-flow"></div>
+                        </div>
+                        <div class="tree-crown hr">
+                            <div class="leaves">
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                            </div>
+                        </div>
+                        <div class="tree-roots">
+                            <div class="root root-1"></div>
+                            <div class="root root-2"></div>
+                            <div class="root root-3"></div>
+                        </div>
+                        <div class="tree-fruits">
+                            <div class="fruit" data-result="+92% Satisfaction"></div>
+                            <div class="fruit" data-result="-38% Turnover"></div>
+                            <div class="fruit" data-result="+67% Performance"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Équipe Harmonieuse</h4>
+                        <p>Analytics RH</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 6 - Supply Chain -->
+                <div class="project-tree" data-project="supply" style="left: 45%; top: 70%;">
+                    <div class="tree-structure">
+                        <div class="tree-trunk">
+                            <div class="data-flow"></div>
+                        </div>
+                        <div class="tree-crown supply">
+                            <div class="leaves">
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                                <div class="leaf"></div>
+                            </div>
+                        </div>
+                        <div class="tree-roots">
+                            <div class="root root-1"></div>
+                            <div class="root root-2"></div>
+                            <div class="root root-3"></div>
+                        </div>
+                        <div class="tree-fruits">
+                            <div class="fruit" data-result="+54% Rapidité"></div>
+                            <div class="fruit" data-result="-32% Coûts"></div>
+                            <div class="fruit" data-result="+87% Traçabilité"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4>Réseau Vivant</h4>
+                        <p>Supply Chain intelligente</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Légende de la carte -->
+            <div class="map-legend">
+                <div class="legend-item">
+                    <div class="legend-icon trunk"></div>
+                    <span>Problématique client</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon roots"></div>
+                    <span>Contexte & données</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon leaves"></div>
+                    <span>Outils & méthodes</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon fruits"></div>
+                    <span>Résultats obtenus</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal de projet -->
+        <div id="project-modal" class="project-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title"></h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-details">
+                        <div class="detail-section">
+                            <h4>🌳 Le Tronc - Problématique</h4>
+                            <p id="modal-problem"></p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>🌿 Les Racines - Contexte</h4>
+                            <p id="modal-context"></p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>🍃 Le Feuillage - Solutions</h4>
+                            <div id="modal-tools"></div>
+                        </div>
+                        <div class="detail-section">
+                            <h4>🍎 Les Fruits - Résultats</h4>
+                            <div id="modal-results"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- Section Contact -->
+<section id="contact" class="enchanted-contact">
+    <div class="section-background">
+        <div class="contact-aurora"></div>
+        <div class="floating-messages">
+            <div class="message-bubble">💌</div>
+            <div class="message-bubble">🦋</div>
+            <div class="message-bubble">✨</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Entrons en Contact</h2>
+            <p class="section-subtitle">
+                Commençons ensemble votre voyage dans la forêt enchantée des données
+            </p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form-container">
+                    <form id="enchanted-contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Votre nom *</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="input-sparkle"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Votre email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="input-sparkle"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Votre entreprise</label>
+                            <input type="text" id="company" name="company">
+                            <div class="input-sparkle"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project">Parlez-nous de votre projet *</label>
+                            <textarea id="project" name="project" rows="5" required 
+                                placeholder="Décrivez votre forêt de données, vos défis, vos rêves..."></textarea>
+                            <div class="input-sparkle"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget estimé</label>
+                            <select id="budget" name="budget">
+                                <option value="">Sélectionnez une fourchette</option>
+                                <option value="5k-15k">5k - 15k €</option>
+                                <option value="15k-30k">15k - 30k €</option>
+                                <option value="30k-50k">30k - 50k €</option>
+                                <option value="50k+">50k+ €</option>
+                            </select>
+                            <div class="input-sparkle"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn-enchanted primary submit-btn">
+                            <span class="btn-text">Envoyer le message</span>
+                            <span class="btn-sparkle">✨</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <h4>Email Magique</h4>
+                        <p>hello@dataforest.fr</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <h4>Ligne Enchantée</h4>
+                        <p>+33 (0)1 23 45 67 89</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-item">
+                        <div class="contact-icon">🏠</div>
+                        <h4>Refuge Physique</h4>
+                        <p>Paris, France</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- Footer -->
+<footer class="enchanted-footer">
+    <div class="footer-background">
+        <div class="footer-stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-deer">🦌</div>
+                <span class="logo-text">DataForest</span>
+            </div>
+            
+            <div class="footer-text">
+                <p>
+                    "Dans chaque donnée sommeille une histoire. 
+                    Dans chaque analyse naît une révélation. 
+                    Dans chaque projet grandit un arbre de sagesse."
+                </p>
+            </div>
+            
+            <div class="footer-social">
+                <a href="#" class="social-link">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 DataForest. Tous droits réservés. Fait avec ✨ et 🌿</p>
+        </div>
+    </div>
+</footer>
 
-<!--Latest version JQuery-->
+<!-- Scripts -->
 <script src="js/jquery-3.2.1.min.js"></script>
-
-<!--Bootstrap js-->
 <script src="js/bootstrap.min.js"></script>
-
-<!--Animated headline js-->
-<script src="js/jquery.animatedheadline.js"></script>
-
-<!--Magnific popup js-->
 <script src="js/jquery.magnific-popup.js"></script>
-<script src="js/custom.js"></script>
-
-<!--Validator js-->
-<script src="js/jquery.waypoints.js"></script>
-
-<!--Counter up js-->
-<script src="js/jquery.counterup.min.js"></script>
-
-<!--imagesloaded js-->
-<script src="js/imagesloaded.min.js"></script>
-
-<!--isotope js-->
-<script src="js/isotope.pkgd.min.js"></script>
-
-<!--Owl Carousel js-->
-<script src="js/owl.carousel.js"></script>
-
-<!--Validator js-->
-<script src="js/validator.js"></script>
-
-<!--Contact js-->
-<script src="js/contact.js"></script>
-
-<!--particles js-->
-<script src="js/particles.js"></script>
-<script src="js/app.js"></script>
-
-<!--Main js-->
-<script src="js/main.js"></script>
+<script src="js/enchanted-forest.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/portfolio-map.js"></script>
+<script src="js/contact-form.js"></script>
 
 </body>
 </html>

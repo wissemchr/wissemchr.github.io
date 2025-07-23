@@ -1,0 +1,1057 @@
+/* ===================================
+   ANIMATIONS ENCHANTÉES
+   =================================== */
+
+/* Animations de base */
+@keyframes deerBreath {
+    0%, 100% { transform: scale(1) translate(-50%, -50%); }
+    50% { transform: scale(1.05) translate(-50%, -50%); }
+}
+
+@keyframes glowPulse {
+    0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes wordAppear {
+    0%, 70% { opacity: 0; transform: translateY(20px); }
+    80%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fireflyFloat {
+    0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.8; }
+    25% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+    50% { transform: translateY(-10px) translateX(-15px); opacity: 0.6; }
+    75% { transform: translateY(-30px) translateX(5px); opacity: 1; }
+}
+
+@keyframes forestParallax {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes auraGlow {
+    0%, 100% { opacity: 0.1; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.3; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+@keyframes dataFlowUp {
+    0% { transform: translateY(100%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100%); opacity: 0; }
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.7; }
+    33% { transform: translateY(-15px) translateX(8px); opacity: 1; }
+    66% { transform: translateY(-5px) translateX(-12px); opacity: 0.8; }
+}
+
+@keyframes underlineGlow {
+    0%, 100% { opacity: 0.8; transform: scaleX(1); }
+    50% { opacity: 1; transform: scaleX(1.1); }
+}
+
+@keyframes wordGlow {
+    0%, 100% { text-shadow: 0 0 5px rgba(78, 205, 196, 0.5); }
+    50% { text-shadow: 0 0 20px rgba(78, 205, 196, 0.8), 0 0 30px rgba(78, 205, 196, 0.6); }
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0px); }
+    50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* ===================================
+   ANIMATIONS SECTION À PROPOS
+   =================================== */
+
+@keyframes mysticalFog {
+    0%, 100% { opacity: 0.1; transform: translateX(0px); }
+    50% { opacity: 0.3; transform: translateX(20px); }
+}
+
+@keyframes leafFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+    25% { transform: translateY(-30px) rotate(90deg); opacity: 0.8; }
+    50% { transform: translateY(-15px) rotate(180deg); opacity: 1; }
+    75% { transform: translateY(-40px) rotate(270deg); opacity: 0.7; }
+}
+
+@keyframes houseGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2); }
+}
+
+@keyframes windowFlicker {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+    25%, 75% { opacity: 0.6; }
+}
+
+@keyframes wisdomParticle {
+    0% { transform: translateY(20px) scale(0); opacity: 0; }
+    50% { transform: translateY(-20px) scale(1); opacity: 1; }
+    100% { transform: translateY(-60px) scale(0); opacity: 0; }
+}
+
+/* Section À Propos - Animations spécifiques */
+.mystical-fog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        rgba(26, 92, 66, 0.1) 0%, 
+        transparent 30%, 
+        rgba(45, 122, 92, 0.1) 60%, 
+        transparent 100%);
+    animation: mysticalFog 15s ease-in-out infinite;
+}
+
+.floating-leaves .leaf {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, var(--forest-bright-green) 0%, var(--forest-medium-green) 100%);
+    border-radius: 0 100% 0 100%;
+    animation: leafFloat 12s ease-in-out infinite;
+}
+
+.leaf-1 { top: 10%; left: 10%; animation-delay: 0s; }
+.leaf-2 { top: 20%; right: 15%; animation-delay: 2s; }
+.leaf-3 { top: 60%; left: 5%; animation-delay: 4s; }
+.leaf-4 { top: 80%; right: 10%; animation-delay: 6s; }
+.leaf-5 { top: 40%; right: 5%; animation-delay: 8s; }
+
+.sanctuary-house {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.house-structure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.house-roof {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 60px solid var(--forest-deep-green);
+    filter: drop-shadow(0 0 10px rgba(10, 61, 46, 0.5));
+}
+
+.house-walls {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--charcoal-dark) 0%, var(--forest-deep-green) 100%);
+    border-radius: 5px;
+    animation: houseGlow 4s ease-in-out infinite;
+}
+
+.house-windows {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 40px;
+}
+
+.window {
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    background: var(--mystical-gold);
+    border-radius: 10px 10px 5px 5px;
+    animation: windowFlicker 3s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+.window-1 { left: 25px; }
+.window-2 { right: 25px; animation-delay: 1.5s; }
+
+.house-door {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 40px;
+    background: var(--forest-medium-green);
+    border-radius: 12px 12px 0 0;
+    border: 2px solid var(--mystical-gold);
+}
+
+.house-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: auraGlow 5s ease-in-out infinite;
+}
+
+.house-warmth {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 100px;
+    background: radial-gradient(ellipse, rgba(212, 175, 55, 0.2) 0%, transparent 60%);
+    animation: glowPulse 3s ease-in-out infinite alternate;
+}
+
+.wisdom-particles .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--ethereal-turquoise);
+    border-radius: 50%;
+    animation: wisdomParticle 4s ease-in-out infinite;
+    box-shadow: 0 0 10px var(--ethereal-turquoise);
+}
+
+.particle:nth-child(1) { top: 60%; left: 20%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 70%; right: 30%; animation-delay: 1s; }
+.particle:nth-child(3) { top: 50%; left: 60%; animation-delay: 2s; }
+.particle:nth-child(4) { top: 80%; right: 20%; animation-delay: 3s; }
+
+/* ===================================
+   ANIMATIONS SECTION SERVICES
+   =================================== */
+
+@keyframes auroraFlow {
+    0%, 100% { transform: translateX(-50px) scaleY(1); opacity: 0.3; }
+    50% { transform: translateX(50px) scaleY(1.2); opacity: 0.6; }
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+}
+
+@keyframes serviceCardHover {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes cardGlowPulse {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes sparkleRotate {
+    0% { transform: rotate(0deg) scale(1); opacity: 0.6; }
+    50% { transform: rotate(180deg) scale(1.2); opacity: 1; }
+    100% { transform: rotate(360deg) scale(1); opacity: 0.6; }
+}
+
+@keyframes crystalGlow {
+    0%, 100% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+    50% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.4); }
+}
+
+/* Section Services - Animations spécifiques */
+.aurora-lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        rgba(107, 70, 193, 0.1) 0%, 
+        transparent 30%, 
+        rgba(59, 130, 246, 0.1) 60%, 
+        transparent 100%);
+    animation: auroraFlow 20s ease-in-out infinite;
+}
+
+.service-constellation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.constellation-star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--luminous-white);
+    border-radius: 50%;
+    animation: starTwinkle 3s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(248, 250, 252, 0.6);
+}
+
+.constellation-star:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+.constellation-star:nth-child(2) { top: 30%; right: 20%; animation-delay: 1s; }
+.constellation-star:nth-child(3) { top: 60%; left: 10%; animation-delay: 2s; }
+.constellation-star:nth-child(4) { top: 70%; right: 15%; animation-delay: 0.5s; }
+.constellation-star:nth-child(5) { top: 40%; left: 50%; animation-delay: 1.5s; }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: rgba(26, 29, 35, 0.8);
+    border: 1px solid rgba(64, 166, 120, 0.2);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-magic);
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(64, 166, 120, 0.4);
+    box-shadow: 0 20px 40px rgba(10, 61, 46, 0.3);
+}
+
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(64, 166, 120, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.service-card:hover .card-glow {
+    opacity: 1;
+    animation: cardGlowPulse 2s ease-in-out infinite;
+}
+
+.service-icon {
+    position: relative;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.icon-crystal {
+    font-size: 3rem;
+    display: block;
+    animation: crystalGlow 3s ease-in-out infinite;
+}
+
+.icon-sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--mystical-gold);
+    border-radius: 50%;
+    animation: sparkleRotate 2s linear infinite;
+    box-shadow: 0 0 8px var(--mystical-gold);
+}
+
+.sparkle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 20%; right: 15%; animation-delay: 0.7s; }
+.sparkle:nth-child(3) { bottom: 15%; left: 15%; animation-delay: 1.4s; }
+
+.service-title {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--luminous-white);
+    margin-bottom: 15px;
+}
+
+.service-description {
+    color: var(--soft-white);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.feature {
+    background: rgba(64, 166, 120, 0.2);
+    color: var(--ethereal-turquoise);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(78, 205, 196, 0.3);
+}
+
+.service-btn {
+    background: transparent;
+    color: var(--mystical-gold);
+    border: 2px solid var(--mystical-gold);
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.service-btn:hover {
+    background: var(--mystical-gold);
+    color: var(--velvet-black);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.btn-arrow {
+    transition: var(--transition-smooth);
+}
+
+.service-btn:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* ===================================
+   ANIMATIONS PORTFOLIO - CARTE ENCHANTÉE
+   =================================== */
+
+@keyframes mapGridPulse {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes treeGrow {
+    0% { transform: scale(0.8); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
+@keyframes rootSpread {
+    0% { transform: scaleX(0); opacity: 0; }
+    100% { transform: scaleX(1); opacity: 0.8; }
+}
+
+@keyframes fruitBounce {
+    0%, 100% { transform: scale(1) translateY(0px); }
+    50% { transform: scale(1.1) translateY(-5px); }
+}
+
+@keyframes leavesRustle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+}
+
+/* Portfolio - Animations spécifiques */
+.forest-map-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(10, 61, 46, 0.2) 0%, transparent 70%);
+    animation: auraGlow 10s ease-in-out infinite;
+}
+
+.map-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(64, 166, 120, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(64, 166, 120, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: mapGridPulse 8s ease-in-out infinite;
+}
+
+.portfolio-map {
+    position: relative;
+    min-height: 600px;
+    margin-top: 50px;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.project-tree {
+    position: absolute;
+    cursor: pointer;
+    transition: var(--transition-magic);
+    animation: treeGrow 3s ease-in-out infinite;
+}
+
+.project-tree:nth-child(1) { animation-delay: 0s; }
+.project-tree:nth-child(2) { animation-delay: 0.5s; }
+.project-tree:nth-child(3) { animation-delay: 1s; }
+.project-tree:nth-child(4) { animation-delay: 1.5s; }
+.project-tree:nth-child(5) { animation-delay: 2s; }
+.project-tree:nth-child(6) { animation-delay: 2.5s; }
+
+.project-tree:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.tree-structure {
+    position: relative;
+    width: 100px;
+    height: 150px;
+}
+
+.project-tree .tree-trunk {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 80px;
+    background: linear-gradient(180deg, var(--forest-light-green) 0%, var(--forest-deep-green) 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(45, 122, 92, 0.5);
+}
+
+.project-tree .data-flow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, var(--ethereal-turquoise) 50%, transparent 100%);
+    animation: dataFlowUp 4s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.project-tree .tree-crown {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    opacity: 0.9;
+    box-shadow: 0 0 20px rgba(64, 166, 120, 0.4);
+}
+
+.tree-crown.ecommerce { background: radial-gradient(circle, #ff6b6b 0%, #ee5a52 100%); }
+.tree-crown.manufacturing { background: radial-gradient(circle, #4ecdc4 0%, #44a08d 100%); }
+.tree-crown.marketing { background: radial-gradient(circle, #45b7d1 0%, #96c93d 100%); }
+.tree-crown.finance { background: radial-gradient(circle, #f39c12 0%, #d35400 100%); }
+.tree-crown.hr { background: radial-gradient(circle, #9b59b6 0%, #8e44ad 100%); }
+.tree-crown.supply { background: radial-gradient(circle, #1abc9c 0%, #16a085 100%); }
+
+.leaves {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: leavesRustle 4s ease-in-out infinite;
+}
+
+.leaves .leaf {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: inherit;
+    border-radius: 0 100% 0 100%;
+    opacity: 0.8;
+}
+
+.leaves .leaf:nth-child(1) { top: 20%; left: 30%; }
+.leaves .leaf:nth-child(2) { top: 40%; right: 25%; }
+.leaves .leaf:nth-child(3) { bottom: 30%; left: 35%; }
+
+.tree-roots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+}
+
+.root {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background: var(--forest-deep-green);
+    border-radius: 2px;
+    animation: rootSpread 2s ease-out;
+    opacity: 0.6;
+}
+
+.root-1 { left: 10px; width: 25px; transform-origin: left; animation-delay: 0.5s; }
+.root-2 { left: 50%; transform: translateX(-50%); width: 30px; transform-origin: center; animation-delay: 1s; }
+.root-3 { right: 10px; width: 20px; transform-origin: right; animation-delay: 1.5s; }
+
+.tree-fruits {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fruit {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--mystical-gold);
+    border-radius: 50%;
+    animation: fruitBounce 3s ease-in-out infinite;
+    box-shadow: 0 0 8px var(--mystical-gold);
+    cursor: pointer;
+}
+
+.fruit:nth-child(1) { top: 30%; left: 20%; animation-delay: 0s; }
+.fruit:nth-child(2) { top: 50%; right: 30%; animation-delay: 1s; }
+.fruit:nth-child(3) { top: 70%; left: 40%; animation-delay: 2s; }
+
+.fruit::before {
+    content: attr(data-result);
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(13, 17, 23, 0.95);
+    color: var(--mystical-gold);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    pointer-events: none;
+}
+
+.fruit:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.project-info {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.project-tree:hover .project-info {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.project-info h4 {
+    font-family: var(--font-title);
+    font-size: 1rem;
+    color: var(--luminous-white);
+    margin-bottom: 5px;
+}
+
+.project-info p {
+    font-size: 0.85rem;
+    color: var(--ethereal-turquoise);
+    margin: 0;
+}
+
+/* Légende de la carte */
+.map-legend {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(13, 17, 23, 0.9);
+    border: 1px solid rgba(64, 166, 120, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--soft-white);
+}
+
+.legend-item:last-child {
+    margin-bottom: 0;
+}
+
+.legend-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.legend-icon.trunk { background: var(--forest-deep-green); }
+.legend-icon.roots { background: var(--forest-medium-green); }
+.legend-icon.leaves { background: var(--forest-bright-green); }
+.legend-icon.fruits { background: var(--mystical-gold); }
+
+/* ===================================
+   ANIMATIONS CONTACT
+   =================================== */
+
+@keyframes contactAurora {
+    0%, 100% { transform: translateY(0px) scaleX(1); opacity: 0.2; }
+    50% { transform: translateY(-20px) scaleX(1.1); opacity: 0.4; }
+}
+
+@keyframes messageBubbleFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(120deg); }
+    66% { transform: translateY(-10px) rotate(240deg); }
+}
+
+@keyframes inputSparkle {
+    0%, 100% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Contact - Animations spécifiques */
+.contact-aurora {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(107, 70, 193, 0.1) 0%, 
+        transparent 40%, 
+        rgba(78, 205, 196, 0.1) 70%, 
+        transparent 100%);
+    animation: contactAurora 18s ease-in-out infinite;
+}
+
+.floating-messages {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.message-bubble {
+    position: absolute;
+    font-size: 2rem;
+    animation: messageBubbleFloat 8s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.message-bubble:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.message-bubble:nth-child(2) { top: 60%; right: 15%; animation-delay: 2.5s; }
+.message-bubble:nth-child(3) { top: 40%; left: 80%; animation-delay: 5s; }
+
+.contact-form-container {
+    background: rgba(26, 29, 35, 0.8);
+    border: 1px solid rgba(64, 166, 120, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px rgba(10, 61, 46, 0.2);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--soft-white);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(13, 17, 23, 0.8);
+    border: 1px solid rgba(64, 166, 120, 0.3);
+    border-radius: 15px;
+    color: var(--luminous-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(5px);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--ethereal-turquoise);
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
+}
+
+.input-sparkle {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    background: var(--ethereal-turquoise);
+    border-radius: 50%;
+    opacity: 0;
+    animation: inputSparkle 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.form-group:focus-within .input-sparkle {
+    animation-play-state: running;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-info {
+    margin-top: 60px;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: crystalGlow 3s ease-in-out infinite;
+}
+
+.contact-item h4 {
+    font-family: var(--font-title);
+    color: var(--luminous-white);
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    color: var(--soft-white);
+    opacity: 0.9;
+}
+
+/* ===================================
+   ANIMATIONS FOOTER
+   =================================== */
+
+@keyframes starShine {
+    0%, 100% { opacity: 0.3; transform: scale(1) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+/* Footer - Animations spécifiques */
+.enchanted-footer {
+    background: linear-gradient(135deg, var(--velvet-black) 0%, var(--forest-deep-green) 100%);
+    border-top: 1px solid rgba(64, 166, 120, 0.2);
+    padding: 60px 0 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.footer-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-stars .star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--mystical-gold);
+    border-radius: 50%;
+    animation: starShine 4s ease-in-out infinite;
+    box-shadow: 0 0 10px var(--mystical-gold);
+}
+
+.footer-stars .star:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+.footer-stars .star:nth-child(2) { top: 40%; left: 60%; animation-delay: 1s; }
+.footer-stars .star:nth-child(3) { top: 30%; right: 20%; animation-delay: 2s; }
+.footer-stars .star:nth-child(4) { top: 60%; left: 30%; animation-delay: 1.5s; }
+.footer-stars .star:nth-child(5) { top: 70%; right: 40%; animation-delay: 0.5s; }
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--luminous-white);
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo-deer {
+    font-size: 2.5rem;
+    animation: deerBreath 3s ease-in-out infinite;
+}
+
+.footer-text {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.footer-text p {
+    font-family: var(--font-accent);
+    font-style: italic;
+    color: var(--soft-white);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(64, 166, 120, 0.2);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+    border-radius: 50%;
+    color: var(--ethereal-turquoise);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.social-link:hover {
+    background: var(--ethereal-turquoise);
+    color: var(--velvet-black);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
+}
+
+.footer-bottom {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(64, 166, 120, 0.2);
+}
+
+.footer-bottom p {
+    color: var(--soft-white);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* ===================================
+   RESPONSIVE ANIMATIONS
+   =================================== */
+
+@media (max-width: 768px) {
+    .firefly, .data-particle, .constellation-star {
+        animation-duration: 6s;
+    }
+    
+    .tree-crown {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .project-tree .tree-trunk {
+        width: 12px;
+        height: 60px;
+    }
+    
+    .map-legend {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        padding: 30px 20px;
+    }
+    
+    .contact-form-container {
+        padding: 30px 20px;
+    }
+    
+    .footer-social {
+        gap: 15px;
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
