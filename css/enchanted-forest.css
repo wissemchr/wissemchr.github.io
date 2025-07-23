@@ -1,0 +1,911 @@
+/* ===================================
+   DATAFOREST - UNIVERS ENCHANTÉ
+   Palette: Vert profond, noir velours, blanc lumineux, touches dorées/turquoise
+   =================================== */
+
+/* Variables CSS */
+:root {
+    /* Couleurs principales */
+    --forest-deep-green: #0a3d2e;
+    --forest-medium-green: #1a5c42;
+    --forest-light-green: #2d7a5c;
+    --forest-bright-green: #40a678;
+    --mystical-gold: #d4af37;
+    --ethereal-turquoise: #4ecdc4;
+    --velvet-black: #0d1117;
+    --charcoal-dark: #1a1d23;
+    --luminous-white: #f8fafc;
+    --soft-white: #e2e8f0;
+    --mystical-purple: #6b46c1;
+    --aurora-blue: #3b82f6;
+    
+    /* Typographies */
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-accent: 'Playfair Display', serif;
+    
+    /* Espacements */
+    --section-padding: 100px 0;
+    --container-max-width: 1200px;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-magic: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--soft-white);
+    background: linear-gradient(135deg, var(--velvet-black) 0%, var(--forest-deep-green) 100%);
+    overflow-x: hidden;
+}
+
+/* ===================================
+   LOADER ENCHANTÉ
+   =================================== */
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--velvet-black) 0%, var(--forest-deep-green) 50%, var(--charcoal-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loader-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.forest-loader {
+    text-align: center;
+    position: relative;
+}
+
+.magical-deer {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+}
+
+.deer-silhouette {
+    width: 80px;
+    height: 80px;
+    background: var(--luminous-white);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: deerBreath 3s ease-in-out infinite;
+}
+
+.deer-antlers {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 30px;
+}
+
+.deer-antlers::before,
+.deer-antlers::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    background: var(--luminous-white);
+    border-radius: 2px;
+}
+
+.deer-antlers::before {
+    left: 10px;
+    transform: rotate(-20deg);
+}
+
+.deer-antlers::after {
+    right: 10px;
+    transform: rotate(20deg);
+}
+
+.deer-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(248, 250, 252, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+.loading-text {
+    margin-bottom: 20px;
+}
+
+.loading-word {
+    display: inline-block;
+    font-family: var(--font-accent);
+    font-size: 1.2rem;
+    color: var(--mystical-gold);
+    margin: 0 5px;
+    opacity: 0;
+    animation: wordAppear 3s ease-in-out infinite;
+}
+
+.loading-word:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.loading-word:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.fireflies-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.fireflies-loader .firefly {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--ethereal-turquoise);
+    border-radius: 50%;
+    animation: fireflyFloat 4s ease-in-out infinite;
+    box-shadow: 0 0 10px var(--ethereal-turquoise);
+}
+
+.fireflies-loader .firefly:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.fireflies-loader .firefly:nth-child(2) { top: 60%; left: 80%; animation-delay: 1s; }
+.fireflies-loader .firefly:nth-child(3) { top: 30%; left: 70%; animation-delay: 2s; }
+.fireflies-loader .firefly:nth-child(4) { top: 80%; left: 20%; animation-delay: 3s; }
+.fireflies-loader .firefly:nth-child(5) { top: 40%; left: 90%; animation-delay: 1.5s; }
+
+/* ===================================
+   NAVIGATION MAGIQUE
+   =================================== */
+
+.magical-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(13, 17, 23, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(64, 166, 120, 0.2);
+    z-index: 1000;
+    transition: var(--transition-smooth);
+}
+
+.nav-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--luminous-white);
+}
+
+.logo-deer {
+    font-size: 2rem;
+    animation: deerBreath 3s ease-in-out infinite;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    color: var(--soft-white);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(64, 166, 120, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-item:hover::before,
+.nav-item.active::before {
+    left: 100%;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--mystical-gold);
+    background: rgba(64, 166, 120, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--luminous-white);
+    border-radius: 2px;
+    transition: var(--transition-smooth);
+}
+
+/* ===================================
+   SECTION HERO - FORÊT ENCHANTÉE
+   =================================== */
+
+.enchanted-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--velvet-black) 0%, var(--forest-deep-green) 40%, var(--forest-medium-green) 100%);
+}
+
+.forest-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.forest-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: forestParallax 20s ease-in-out infinite;
+}
+
+.layer-1 {
+    background: radial-gradient(ellipse at center bottom, rgba(26, 92, 66, 0.3) 0%, transparent 70%);
+    animation-delay: 0s;
+}
+
+.layer-2 {
+    background: radial-gradient(ellipse at 20% 80%, rgba(45, 122, 92, 0.2) 0%, transparent 50%);
+    animation-delay: 5s;
+}
+
+.layer-3 {
+    background: radial-gradient(ellipse at 80% 60%, rgba(64, 166, 120, 0.15) 0%, transparent 60%);
+    animation-delay: 10s;
+}
+
+.layer-4 {
+    background: radial-gradient(ellipse at 50% 30%, rgba(78, 205, 196, 0.1) 0%, transparent 40%);
+    animation-delay: 15s;
+}
+
+/* Cerf Blanc Gardien */
+.white-deer-container {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.white-deer {
+    position: relative;
+    width: 200px;
+    height: 250px;
+}
+
+.deer-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.deer-head {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--luminous-white) 0%, rgba(248, 250, 252, 0.9) 100%);
+    border-radius: 50% 50% 60% 40%;
+    box-shadow: 0 0 30px rgba(248, 250, 252, 0.5);
+}
+
+.deer-antlers {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 60px;
+}
+
+.antler {
+    position: absolute;
+    width: 4px;
+    background: var(--luminous-white);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(248, 250, 252, 0.3);
+}
+
+.antler.left {
+    left: 20px;
+    height: 50px;
+    transform: rotate(-15deg);
+}
+
+.antler.right {
+    right: 20px;
+    height: 50px;
+    transform: rotate(15deg);
+}
+
+.antler::before,
+.antler::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background: var(--luminous-white);
+    border-radius: 2px;
+}
+
+.antler.left::before {
+    top: 15px;
+    left: -8px;
+    height: 20px;
+    transform: rotate(-30deg);
+}
+
+.antler.left::after {
+    top: 25px;
+    right: -8px;
+    height: 15px;
+    transform: rotate(45deg);
+}
+
+.antler.right::before {
+    top: 15px;
+    right: -8px;
+    height: 20px;
+    transform: rotate(30deg);
+}
+
+.antler.right::after {
+    top: 25px;
+    left: -8px;
+    height: 15px;
+    transform: rotate(-45deg);
+}
+
+.deer-legs {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 100px;
+}
+
+.leg {
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: linear-gradient(180deg, var(--luminous-white) 0%, rgba(248, 250, 252, 0.8) 100%);
+    border-radius: 4px;
+}
+
+.leg.front-left { left: 15px; }
+.leg.front-right { right: 15px; }
+.leg.back-left { left: 25px; height: 70px; top: 10px; }
+.leg.back-right { right: 25px; height: 70px; top: 10px; }
+
+.deer-aura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(248, 250, 252, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: auraGlow 4s ease-in-out infinite;
+}
+
+.deer-breath {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    animation: deerBreath 3s ease-in-out infinite;
+}
+
+/* Lucioles animées */
+.fireflies-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.firefly {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--ethereal-turquoise);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--ethereal-turquoise);
+    animation: fireflyFloat 8s ease-in-out infinite;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.firefly::before {
+    content: attr(data-insight);
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(13, 17, 23, 0.9);
+    color: var(--luminous-white);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+}
+
+.firefly:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.firefly:nth-child(1) { top: 20%; left: 60%; animation-delay: 0s; }
+.firefly:nth-child(2) { top: 35%; left: 80%; animation-delay: 2s; }
+.firefly:nth-child(3) { top: 60%; left: 70%; animation-delay: 4s; }
+.firefly:nth-child(4) { top: 45%; left: 90%; animation-delay: 6s; }
+.firefly:nth-child(5) { top: 75%; left: 85%; animation-delay: 1s; }
+.firefly:nth-child(6) { top: 25%; left: 75%; animation-delay: 3s; }
+
+/* Arbres scintillants */
+.sparkling-trees {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.tree {
+    position: absolute;
+    width: 80px;
+    height: 200px;
+}
+
+.tree-1 { top: 30%; right: 10%; }
+.tree-2 { top: 60%; right: 25%; }
+.tree-3 { top: 20%; right: 5%; }
+
+.tree-trunk {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 120px;
+    background: linear-gradient(180deg, var(--forest-light-green) 0%, var(--forest-deep-green) 100%);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.data-flow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, var(--ethereal-turquoise) 50%, transparent 100%);
+    animation: dataFlowUp 3s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.tree-crown {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, var(--forest-bright-green) 0%, var(--forest-medium-green) 100%);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.data-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--mystical-gold);
+    border-radius: 50%;
+    animation: particleFloat 4s ease-in-out infinite;
+    box-shadow: 0 0 8px var(--mystical-gold);
+}
+
+.data-particle:nth-child(1) { top: 20%; left: 30%; animation-delay: 0s; }
+.data-particle:nth-child(2) { top: 60%; left: 70%; animation-delay: 1.5s; }
+.data-particle:nth-child(3) { top: 40%; left: 50%; animation-delay: 3s; }
+
+/* Contenu Hero */
+.hero-content {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.enchanted-title {
+    font-family: var(--font-title);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: var(--luminous-white);
+}
+
+.title-line {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.highlight-word {
+    color: var(--mystical-gold);
+    position: relative;
+}
+
+.highlight-word::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--mystical-gold) 0%, var(--ethereal-turquoise) 100%);
+    border-radius: 2px;
+    animation: underlineGlow 2s ease-in-out infinite;
+}
+
+.magical-words {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.word {
+    display: inline-block;
+    color: var(--ethereal-turquoise);
+    animation: wordGlow 3s ease-in-out infinite;
+}
+
+.word:nth-child(2) { animation-delay: 1s; }
+.word:nth-child(3) { animation-delay: 2s; }
+
+.hero-description {
+    font-family: var(--font-accent);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--soft-white);
+    opacity: 0.9;
+}
+
+.hero-description em {
+    color: var(--mystical-gold);
+    font-style: italic;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Boutons enchantés */
+.btn-enchanted {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-magic);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.btn-enchanted.primary {
+    background: linear-gradient(135deg, var(--mystical-gold) 0%, var(--ethereal-turquoise) 100%);
+    color: var(--velvet-black);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.btn-enchanted.secondary {
+    background: transparent;
+    color: var(--luminous-white);
+    border: 2px solid var(--mystical-gold);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.btn-enchanted::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-enchanted:hover::before {
+    left: 100%;
+}
+
+.btn-enchanted:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+}
+
+.btn-enchanted.secondary:hover {
+    background: var(--mystical-gold);
+    color: var(--velvet-black);
+}
+
+/* Indicateur de scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 4;
+    animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.scroll-text {
+    font-size: 0.9rem;
+    color: var(--soft-white);
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.scroll-arrow {
+    width: 2px;
+    height: 30px;
+    background: var(--mystical-gold);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 1px;
+}
+
+.arrow-head {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid var(--mystical-gold);
+}
+
+/* ===================================
+   SECTIONS COMMUNES
+   =================================== */
+
+section {
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--luminous-white);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--mystical-gold) 0%, var(--ethereal-turquoise) 100%);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-family: var(--font-accent);
+    font-size: 1.1rem;
+    color: var(--soft-white);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .white-deer-container {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+    }
+    
+    .white-deer {
+        width: 150px;
+        height: 180px;
+    }
+    
+    .hero-content {
+        margin-top: 100px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-enchanted {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .sparkling-trees {
+        display: none;
+    }
+    
+    .fireflies-container {
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .hero-content {
+        padding: 0 15px;
+    }
+    
+    .section-header {
+        margin-bottom: 50px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
