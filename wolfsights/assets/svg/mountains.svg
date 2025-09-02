@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="snow" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2a3446"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="#0b1220"/>
+  <path d="M0 320 L140 240 L220 280 L320 180 L420 260 L520 200 L600 240 L720 160 L860 260 L980 200 L1100 260 L1200 220 L1200 400 L0 400 Z" fill="url(#snow)"/>
+</svg>
