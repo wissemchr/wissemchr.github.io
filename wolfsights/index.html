@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="Wolfsights – L’instinct du loup au service de vos données. BI, analytics, automatisation et visualisations immersives." />
+  <title>Wolfsights — L’instinct du loup au service de vos données</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header" role="banner">
+    <div class="logo">Wolfsights</div>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Réalisations</a>
+      <a href="#about">À propos</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="Accueil">
+      <canvas id="starfield" aria-hidden="true"></canvas>
+      <div class="hero-layers" aria-hidden="true">
+        <div class="layer mountains"></div>
+        <div class="layer moon"></div>
+        <div class="layer wolf"></div>
+        <div class="snow" aria-hidden="true"></div>
+      </div>
+      <div class="hero-content">
+        <h1>
+          <span class="brand">Wolfsights</span>
+          <span class="tagline">L’instinct du loup au service de vos données</span>
+        </h1>
+        <a href="#services" class="btn-neon">Découvrir mes services</a>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section services" aria-label="Services">
+      <header class="section-header reveal">
+        <h2>Services</h2>
+        <p>De la vision à la garde de vos données, avec précision et élégance.</p>
+      </header>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="icon icon-alpha" aria-hidden="true"></div>
+          <h3>Vision Alpha</h3>
+          <p>BI & Reporting cristallins. Donnez à vos équipes une lecture simple et lunaire.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon icon-scout" aria-hidden="true"></div>
+          <h3>Éclaireur</h3>
+          <p>Analyse avancée & détection de signaux faibles. Loup et constellations en éveil.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon icon-guardian" aria-hidden="true"></div>
+          <h3>Gardien</h3>
+          <p>Automatisation & surveillance des données. Des flux fiables, de nuit comme de jour.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section portfolio" aria-label="Réalisations">
+      <header class="section-header reveal">
+        <h2>Réalisations</h2>
+        <p>Cas clients, dashboards et visualisations — dans des cadres lumineux.</p>
+      </header>
+      <div class="grid">
+        <figure class="work reveal">
+          <img src="assets/img/placeholder-1.jpg" alt="Dashboard de performance — tonalités nocturnes" />
+          <figcaption>Dashboard de performance</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <img src="assets/img/placeholder-2.jpg" alt="Monitoring automatisé — flux de données" />
+          <figcaption>Monitoring automatisé</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <img src="assets/img/placeholder-3.jpg" alt="Exploration de signaux faibles — visualisation cosmique" />
+          <figcaption>Signaux faibles</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about" aria-label="À propos">
+      <header class="section-header reveal">
+        <h2>À propos</h2>
+      </header>
+      <div class="about-content reveal">
+        <p>
+          Ma mission est simple : transformer les données en clarté et en puissance.
+          À la manière d’un loup traçant sa voie sous la lune, j’allie instinct
+          analytique et technologie de pointe pour guider vos décisions.
+        </p>
+        <div class="cosmic-wolf" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact" aria-label="Contact">
+      <header class="section-header reveal">
+        <h2>Contact</h2>
+        <p>Parlons de vos données.</p>
+      </header>
+      <form class="contact-form reveal" netlify>
+        <label>
+          <span>Votre nom</span>
+          <input name="name" type="text" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input name="email" type="email" required />
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn-neon">Envoyer</button>
+      </form>
+      <canvas id="contact-particles" aria-hidden="true"></canvas>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Wolfsights — Data with lunar clarity.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
